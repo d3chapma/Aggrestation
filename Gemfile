@@ -21,7 +21,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard'
   gem 'growl'
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  #gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem 'guard-rspec'
   gem 'guard-spork'
 end
