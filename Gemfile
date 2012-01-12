@@ -5,7 +5,7 @@ gem 'sqlite3'
 gem 'feedzirra'
 gem 'jquery-rails'
 gem 'haml'
-gem 'simple_form' 
+gem 'formtastic-bootstrap' 
 
 
 # Gems used only for assets and not required

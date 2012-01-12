@@ -1,7 +1,7 @@
 #recent_episodes
-  %h2 News
-  %ul
-    - for entry in FeedEntry.all(:limit => 10, :order => "published_at desc")
+  %h1 News
+  %ul.unstyled
+    - @entries.each do |entry|
       %li
-        %h3= entry.name
-        %p= entry.summary
+        %h2= link_to entry.name.html_safe, entry.url
+        %p= entry.content.nil? ? entry.summary.html_safe : entry.content.html_safe

@@ -6,6 +6,13 @@
   = javascript_include_tag "application" 
   = csrf_meta_tags 
 %body
+  .topbar
+    .fill
+      .container
+        %ul.nav
+          %li= link_to "News", root_path
+          %li= link_to "Manage Feeds", feeds_path
+
   .container
     .content
       .row

@@ -1,0 +1,22 @@
+// Place all the styles related to the Feeds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#new_feed {
+  .inputs {
+    width: 650px;
+    float: left;
+    
+    .input {
+      margin-left: 60px;
+    }
+    
+    label {
+      width: 50px;
+    }
+  }
+  .actions {
+    background-color: white;
+    border-top: 0;
+  }
+}

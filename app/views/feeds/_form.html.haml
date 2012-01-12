@@ -1,0 +1,6 @@
+= semantic_form_for @feed do |f|
+  = f.inputs do
+    = f.input :url, :input_html => { :class => 'span10'}
+  = f.buttons do
+    = f.commit_button "Add Feed", :button_html => { :class => 'primary' }
+    

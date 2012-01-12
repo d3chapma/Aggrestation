@@ -8,7 +8,12 @@ html, body {
   background-color: #eee;
 }
 
-.container {
+body {
+  padding-top: 40px; 
+}
+
+body > .container {
+  paddin-top: 40px;
   width: 820px;
 }
 
@@ -25,6 +30,19 @@ html, body {
              box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 
-li {
-  list-style: none;
+body > .container li {
+  margin-bottom: 30px;
+}
+
+h2 > a {
+  color: black;
+  cursor: pointer;
+}
+
+.topbar {
+  height: 20px;
+  
+  .container {
+    padding-left: 100px;
+  }
 }
