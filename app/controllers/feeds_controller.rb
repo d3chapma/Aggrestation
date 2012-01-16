@@ -16,7 +16,7 @@ class FeedsController < ApplicationController
   
   def fetch
     @feed = Feed.find(params[:id])
-    FeedEntry.fetch_new_entries(@feed.url)
+    FeedEntry.update_from_feed(@feed.url)
     
     redirect_to feeds_path, notice: '#{@feed.url} fetched'
   end
