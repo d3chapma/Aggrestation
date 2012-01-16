@@ -3,7 +3,7 @@ task :update_feeds => :environment do
     puts "Updating feed..."
     feeds = Feed.all
     feeds.each do |feed|
-      feed.update
+      FeedEntry.update_from_feed(feed.url)
       puts "#{feed.url} updated."
     end
     puts "done."
