@@ -4,5 +4,6 @@ Aggrestation::Application.routes.draw do
   resources :pages
   resources :feeds do
     get 'fetch', :on => :member
+    resources :keywords
   end
 end

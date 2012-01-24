@@ -1,0 +1,5 @@
+= semantic_form_for [@feed, @keyword] do |f|
+  = f.inputs do
+    = f.input :name, :input_html => { :class => 'span10'}
+  = f.buttons do
+    = f.commit_button "Add Keyword", :button_html => { :class => 'primary' }

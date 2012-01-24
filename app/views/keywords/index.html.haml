@@ -1,0 +1,12 @@
+%h1 Listing keywords for #{@feed.url}
+
+= render 'form'
+
+%table
+  %tr
+    %th Keywords
+
+  - @keywords.each do |keyword|
+    %tr
+      %td= keyword.name
+      %td= link_to 'Delete', feed, confirm: 'Are you sure?', method: :delete

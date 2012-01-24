@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120113202730) do
+ActiveRecord::Schema.define(:version => 20120124185047) do
 
   create_table "feed_entries", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,19 @@ ActiveRecord::Schema.define(:version => 20120113202730) do
     t.string   "etag"
     t.datetime "last_modified"
     t.string   "last_entry_url"
+  end
+
+  create_table "filters", :force => true do |t|
+    t.integer  "feed_id"
+    t.integer  "keyword_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "keywords", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

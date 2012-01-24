@@ -1,4 +1,7 @@
 class Feed < ActiveRecord::Base
+  has_many :filters
+  has_many :keywords, :through => :filters
+  
   def update
     if etag.nil?
       new_feed = Feedzirra::Feed.fetch_and_parse(url)

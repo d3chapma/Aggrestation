@@ -9,5 +9,9 @@
   - @feeds.each do |feed|
     %tr
       %td= feed.url
-      %td= link_to 'Fetch', fetch_feed_path(feed)
-      %td= link_to 'Delete', feed, confirm: 'Are you sure?', method: :delete
+      %td
+        = link_to 'Keywords', feed_keywords_path(feed)
+        |
+        = link_to 'Fetch', fetch_feed_path(feed)
+        |
+        = link_to 'Delete', feed, confirm: 'Are you sure?', method: :delete
