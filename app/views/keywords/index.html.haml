@@ -9,4 +9,4 @@
   - @keywords.each do |keyword|
     %tr
       %td= keyword.name
-      %td= link_to 'Delete', feed, confirm: 'Are you sure?', method: :delete
+      %td= link_to 'Delete', @feed, confirm: 'Are you sure?', method: :delete

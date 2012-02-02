@@ -1,6 +1,6 @@
 class Feed < ActiveRecord::Base
-  has_many :filters
-  has_many :keywords, :through => :filters
+  has_many :filters, :dependent => :destroy
+  has_many :keywords, :through => :filters, :uniq => true
   
   def update
     if etag.nil?

@@ -9,8 +9,6 @@ class FeedsController < ApplicationController
 
     if @feed.save
       redirect_to feeds_path, notice: 'Feed was successfully created.' 
-    else
-      render action: "new"
     end
   end
   
